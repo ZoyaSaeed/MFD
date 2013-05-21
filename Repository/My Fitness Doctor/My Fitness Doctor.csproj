@@ -191,8 +191,11 @@
     <Content Include="Images\Tracker\Contract.png" />
     <Content Include="Images\Tracker\Dark.png" />
     <Content Include="Images\Tracker\Expand.png" />
+    <Content Include="Images\Tracker\Large.jpg" />
     <Content Include="Images\Tracker\Light.png" />
+    <Content Include="Images\Tracker\Medium.jpg" />
     <Content Include="Images\Tracker\Pause.png" />
+    <Content Include="Images\Tracker\Small.jpg" />
     <Content Include="Images\Tracker\TrackerStartTileLogo.png" />
     <Content Include="README_FIRST.txt" />
     <None Include="Service References\WeatherTodayAPI\configuration91.svcinfo" />

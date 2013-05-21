@@ -328,18 +328,29 @@ namespace My_Fitness_Doctor.Views
         {
             try
             {
-                StandardTileData standardTileData = new StandardTileData();
-                standardTileData.BackgroundImage = null;
-                standardTileData.Title = "Tracker";
+                string tileparameter = string.Format("{0:f2} km", _kilometres);
 
-                standardTileData.BackTitle = "Tracker";
-                standardTileData.BackContent = "";
-                standardTileData.BackBackgroundImage = new Uri("/Images/Tracker/TrackerStartTileLogo.png", UriKind.Relative);
-                ShellTile tiletopin = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains("MainPage.xaml"));
+                FlipTileData flipTileData = new FlipTileData();
+
+
+                flipTileData.Title = "Tracker";
+                flipTileData.BackTitle = "Tracker";
+                flipTileData.BackgroundImage = new Uri("/Images/Tracker/Medium.jpg", UriKind.Relative);
+                flipTileData.SmallBackgroundImage = new Uri("/Images/Tracker/Small.jpg", UriKind.Relative);
+                flipTileData.WideBackgroundImage = new Uri("/Images/Tracker/Large.jpg", UriKind.Relative);
+                flipTileData.WideBackBackgroundImage = null;
+
+                flipTileData.BackContent = string.Format("{0:f2} km", _kilometres);
+                flipTileData.WideBackContent = string.Format("{0:f2} km", _kilometres);
+
+                ShellTile tiletopin = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri.ToString().Contains(tileparameter));
                 if (tiletopin == null)
                 {
-                    ShellTile.Create(new Uri("/Views/Tracker.xaml", UriKind.Relative), standardTileData);
-
+                    ShellTile.Create(new Uri("/Views/Tracker.xaml?" + tileparameter, UriKind.Relative), flipTileData, true);
+                }
+                else
+                {
+                    MessageBox.Show("Already Pinned.", "Information", MessageBoxButton.OK);
                 }
             }
             catch (Exception ex)
