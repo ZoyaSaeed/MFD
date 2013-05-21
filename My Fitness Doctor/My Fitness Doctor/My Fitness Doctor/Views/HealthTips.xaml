@@ -1,0 +1,149 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="My_Fitness_Doctor.Views.HealthTips"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="728"
+   d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Opacity="1" Height="800" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74*" />
+            <RowDefinition Height="726*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/CommonImages/Background.jpg" Stretch="UniformToFill" Opacity="1" />
+        </Grid.Background>
+        
+        <Image Height="70" HorizontalAlignment="Left" 
+         Name="logo" Stretch="Fill" VerticalAlignment="Top"
+         Width="397" Source="/Images/CommonImages/Logo.png"  />
+
+        <Border BorderThickness="1" Grid.Row="1" 
+                Height="518" HorizontalAlignment="Left" 
+                Margin="12,128,0,0" Name="border2" 
+                VerticalAlignment="Top" Width="456" 
+                Background="#2C3D42F8" />
+
+        <controls:Pivot Title="" Grid.RowSpan="2" Grid.Row="2" Foreground="White">
+            <!--Pivot Control-->
+            <controls:PivotItem Header="Heart" Foreground="#FFF0F57E">
+                <!--Double line list with text wrapping-->
+                <ListBox x:Name="HeartListBox" Margin="0,0,-12,0" Foreground="White" Height="690"
+                         ItemsSource="{Binding Items1}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel  >
+                                <TextBlock Text="{Binding HeartTipHeader}" 
+                                           TextWrapping="Wrap" FontSize="30"
+                                           Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                                           Foreground="#FFBAE0FF"  />
+                                <TextBlock Text="{Binding HeartTip}" 
+                                           TextWrapping="Wrap" Foreground="#FFFFA0FF" 
+                                           Margin="12,-6,0,0" FontSize="24"
+                                           Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="Brain"  Foreground="#FFF0F57E">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="BrainListBox" Margin="0,0,-12,0" Foreground="White" ItemsSource="{Binding Items1}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel >
+                                <TextBlock Text="{Binding BrainTipHeader}"
+                                           FontSize="30" TextWrapping="Wrap" Foreground="#FFBAE0FF"
+                                           Style="{StaticResource PhoneTextExtraLargeStyle}"  />
+                                <TextBlock Text="{Binding BrainTip}" FontSize="24"
+                                           Margin="12,-6,0,0" TextWrapping="Wrap" 
+                                           Foreground="#FFFFA0FF" 
+                                           Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="Eyes"  Foreground="#FFF0F57E">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="EyesListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items1}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel >
+                                <TextBlock Text="{Binding Header}" TextWrapping="Wrap" 
+                                          Foreground="#FFBAE0FF" 
+                                           Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                                           FontSize="30" />
+                                <TextBlock Text="{Binding Tip}" 
+                                           TextWrapping="Wrap" FontSize="24"
+                                            Margin="12,-6,0,0" Foreground="#FFFFA0FF" 
+                                           Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PivotItem>
+
+
+            <controls:PivotItem Header="Skin" Foreground="#FFF0F57E">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SkinListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items1}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel  >
+                                <TextBlock Text="{Binding SkinTipHeader}" 
+                                           TextWrapping="Wrap" 
+                                           Foreground="#FFBAE0FF" 
+                                           Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                                           FontSize="30" />
+                                <TextBlock Text="{Binding SkinTip}" TextWrapping="Wrap" FontSize="24" Foreground="#FFFFA0FF" 
+                                           Margin="12,-6,0,0"  Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PivotItem>
+        </controls:Pivot>
+
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" BackgroundColor="#FF070419" ForegroundColor="White" IsMenuEnabled="True">
+            
+            <shell:ApplicationBarIconButton 
+                x:Name="Pin"
+                IconUri="/Icons/Dark/Pin.png" 
+                Text="Pin" Click="Pin_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="About"
+                IconUri="/Icons/Dark/appbar.questionmark.rest.png" 
+                Text="Anout"/>
+
+
+            <shell:ApplicationBarIconButton 
+                x:Name="Settings" 
+                IconUri="/Icons/Dark/appbar.feature.settings.rest.png" 
+                Text="Settings"/>
+           
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+</phone:PhoneApplicationPage>

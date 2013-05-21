@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDD4E2A9-5376-4405-8FA6-0096B8CD216E}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>My_Fitness_Doctor</RootNamespace>
+    <AssemblyName>My Fitness Doctor</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>My Fitness Doctor_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>My_Fitness_Doctor.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WPtoolkit.4.2012.10.30\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeatherAPI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Note.cs" />
+    <Compile Include="ViewModels\SubItemViewModel.cs" />
+    <Compile Include="ViewModels\SubMainViewModel.cs" />
+    <Compile Include="Views\AddNote.xaml.cs">
+      <DependentUpon>AddNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppAbout.xaml.cs">
+      <DependentUpon>AppAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BMIAbout.xaml.cs">
+      <DependentUpon>BMIAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalorieCounter.xaml.cs">
+      <DependentUpon>CalorieCounter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalorieCounterAbout.xaml.cs">
+      <DependentUpon>CalorieCounterAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalorieCounterItemDetails.xaml.cs">
+      <DependentUpon>CalorieCounterItemDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalorieCounterItemsList.xaml.cs">
+      <DependentUpon>CalorieCounterItemsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CalorieCounterMultipleItems.xaml.cs">
+      <DependentUpon>CalorieCounterMultipleItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditNote.xaml.cs">
+      <DependentUpon>EditNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HealthTips.xaml.cs">
+      <DependentUpon>HealthTips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BMICalculator.xaml.cs">
+      <DependentUpon>BMICalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Notes.xaml.cs">
+      <DependentUpon>Notes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NotesAbout.xaml.cs">
+      <DependentUpon>NotesAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatisticalReports.xaml.cs">
+      <DependentUpon>StatisticalReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StopWatchPage.xaml.cs">
+      <DependentUpon>StopWatchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tracker.xaml.cs">
+      <DependentUpon>Tracker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeatherPage.xaml.cs">
+      <DependentUpon>WeatherPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Content Include="Icons\Dark\appbar.cancel.rest.png" />
+    <Content Include="Icons\Dark\appbar.edit.rest.png" />
+    <Content Include="Icons\Dark\appbar.save.rest.png" />
+    <Content Include="Icons\Dark\appbar.delete.rest.png" />
+    <Content Include="Icons\Dark\appbar.back.rest.png" />
+    <Content Include="Images\Tracker\Contract.png" />
+    <Content Include="Images\Tracker\Dark.png" />
+    <Content Include="Images\Tracker\Expand.png" />
+    <Content Include="Images\Tracker\Light.png" />
+    <Content Include="Images\Tracker\Pause.png" />
+    <Content Include="Images\Tracker\TrackerStartTileLogo.png" />
+    <Content Include="README_FIRST.txt" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Resource Include="Icons\Light\appbar.back.rest.png" />
+    <Resource Include="Icons\Light\appbar.delete.rest.png" />
+    <Resource Include="Icons\Light\appbar.save.rest.png" />
+    <Content Include="Icons\Dark\check.png" />
+    <Content Include="Icons\Dark\feature.email.png" />
+    <Content Include="Icons\Dark\Like.png" />
+    <Content Include="Icons\Dark\Map.png" />
+    <Content Include="Icons\Dark\transport.pause.png" />
+    <Content Include="Icons\Dark\transport.play.png" />
+    <Content Include="Icons\Light\appbar.cancel.rest.png" />
+    <Content Include="Icons\Light\appbar.edit.rest.png" />
+    <Content Include="Icons\Light\feature.email.png" />
+    <Content Include="Icons\Light\Like.png" />
+    <Content Include="Icons\Light\List.png" />
+    <Content Include="Icons\Light\Map.png" />
+    <Content Include="Icons\Light\Pin.png" />
+    <Content Include="Icons\Light\transport.pause.png" />
+    <Content Include="Icons\Light\transport.play.png" />
+    <Content Include="Images\BMI\bluebmi.png" />
+    <Content Include="Images\BMI\BMIStartTileIcon.png" />
+    <Content Include="Images\BMI\needle1.png" />
+    <Content Include="Images\CalorieCounter\CalorieCOunterStartTileLogo.png" />
+    <Content Include="Images\CalorieCounter\CalorieCounterTileIcon.png" />
+    <Content Include="Images\CommonImages\Logo.png" />
+    <Content Include="Images\HealthTips\HealthTipsStartTileIcon.png" />
+    <Content Include="Images\Notes\NotesStartTileIcon.png" />
+    <Content Include="Images\StatisticalReports\stats.png" />
+    <Content Include="Images\Stopwatch\StopWatchStartTileLogo.png" />
+    <Content Include="Images\Weather\PanoramaBackground.png" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\WeatherAPI\configuration91.svcinfo" />
+    <None Include="Service References\WeatherAPI\configuration.svcinfo" />
+    <None Include="Service References\WeatherAPI\My_Fitness_Doctor.WeatherAPI.ArrayOfXElement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WeatherAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Images\Weather\WeatherStartTileLogo.png" />
+    <Content Include="Third Party References\Microsoft.Phone.Controls.Toolkit.dll" />
+    <Content Include="Third Party References\Microsoft.Phone.Controls.Toolkit.pdb" />
+    <Content Include="Third Party References\Microsoft.Phone.Controls.Toolkit.xml" />
+    <Page Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SubViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BMIAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CalorieCounter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CalorieCounterAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CalorieCounterItemDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CalorieCounterItemsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CalorieCounterMultipleItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HealthTips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BMICalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Notes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Content Include="Icons\Dark\appbar.refresh.rest.png" />
+    <Content Include="Icons\Dark\List.png" />
+    <Content Include="Icons\Dark\Share.png" />
+    <Content Include="Icons\Dark\Pin.png" />
+    <Content Include="Icons\Light\appbar.refresh.rest.png" />
+    <Content Include="Icons\Light\appbar.add.rest.png" />
+    <Content Include="Icons\Light\appbar.feature.search.rest.png" />
+    <Content Include="Icons\Dark\appbar.add.rest.png" />
+    <Content Include="Icons\Dark\appbar.feature.search.rest.png" />
+    <Content Include="Icons\Light\appbar.close.rest.png" />
+    <Content Include="Icons\Light\appbar.feature.settings.rest.png" />
+    <Content Include="Icons\Dark\appbar.close.rest.png" />
+    <Content Include="Icons\Dark\appbar.feature.settings.rest.png" />
+    <Content Include="Icons\Light\appbar.questionmark.rest.png" />
+    <Content Include="Icons\Dark\appbar.questionmark.rest.png" />
+    <Content Include="Icons\Dark\appbar.feature.camera.rest.png" />
+    <Content Include="Icons\Light\appbar.feature.camera.rest.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\AlcoholicDrinks.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Beverages.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\BreadsProducts.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Cakes.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Chicken.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\DessertsAndPies.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Dressings.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\fast foods.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Fruits.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\InternationalFoods.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Meats.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Poultry.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Rice and pasta.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Sausages.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Seafoods.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Snacks.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\SoupAndTofu.png" />
+    <Content Include="Images\CalorieCounter\MainItemsTile\Vegetables.png" />
+    <Content Include="Images\CalorieCounter\Calculator.png" />
+    <Content Include="Images\CommonImages\Background.jpg" />
+    <Content Include="Images\CommonImages\StartTileLogo.png" />
+    <Page Include="Views\NotesAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatisticalReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StopWatchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tracker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WeatherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\DIGITALDREAM.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherAPI\default.wsdl" />
+    <Content Include="ServiceReferences.ClientConfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BMI\BMITileIcon.png" />
+    <Content Include="Images\HealthTips\HealthTipsTileIcon.png" />
+    <Content Include="Images\Notes\NotesTileIcon.png" />
+    <Content Include="Images\StatisticalReports\StatisticalReportsTileIcon.png" />
+    <Content Include="Images\Stopwatch\StopwatchTileIcon.png" />
+    <Content Include="Images\Tracker\TrackerTileIcon.png" />
+    <Content Include="Images\Weather\WeatherTileImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WeatherAPI\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>
