@@ -1,0 +1,131 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="My_Fitness_Doctor.Views.StopWatchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/CommonImages/Background.jpg" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Height="70" HorizontalAlignment="Left" 
+         Name="logo" Stretch="Fill" VerticalAlignment="Top"
+         Width="397" Source="/Images/CommonImages/Logo.png" Grid.ColumnSpan="2" />
+
+        
+
+            <TextBlock x:Name="PageTitle" Text="Stopwatch" Foreground="White"
+              Margin="18,45,-9,517" Style="{StaticResource PhoneTextTitle1Style}" 
+              Height="96" FontFamily="DengXian" FontWeight="Bold" Grid.Row="1" />
+        <Grid x:Name="Digits" Grid.Row="1" Margin="12,90,0,420">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="418*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Border BorderBrush="Silver" BorderThickness="0" Height="108" HorizontalAlignment="Left" Margin="11,40,0,0" Name="border1" VerticalAlignment="Top" Width="115">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#46FFFFFF" Offset="0.017" />
+                        <GradientStop Color="#79026EB3" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <TextBox Height="117" HorizontalAlignment="Left" 
+                     Name="Hours" Text="00" 
+                     VerticalAlignment="Top" FontFamily="/Fonts/DIGITALDREAM.ttf#DIGITAL DREAM" 
+                     Width="146" Foreground="White" BorderBrush="{x:Null}" 
+                     FontSize="70" Margin="-4,40,0,0" Background="{x:Null}"></TextBox >
+
+
+
+            <Border BorderBrush="Silver" BorderThickness="0" Height="108" HorizontalAlignment="Left" Margin="254,40,0,0" Name="border3" VerticalAlignment="Top" Width="113">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#46FFFFFF" Offset="0.017" />
+                        <GradientStop Color="#79026EB3" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <TextBox Height="135" Name="Seconds" Text="00" 
+                     VerticalAlignment="Top" FontFamily="/Fonts/DIGITALDREAM.ttf#DIGITAL DREAM" 
+                     Foreground="White" BorderBrush="{x:Null}" FontSize="70" 
+                     Margin="238,41,0,0" Background="{x:Null}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="190"></TextBox>
+
+
+            <Border BorderBrush="Silver" BorderThickness="0" Height="73" HorizontalAlignment="Left" Margin="373,75,0,0" Name="border4" VerticalAlignment="Top" Width="85" Grid.ColumnSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#46FFFFFF" Offset="0.017" />
+                        <GradientStop Color="#79026EB3" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <TextBox Height="91" HorizontalAlignment="Left" 
+                     Name="MilliSeconds" Text="000" 
+                     VerticalAlignment="Top" FontFamily="/Fonts/DIGITALDREAM.ttf#DIGITAL DREAM" 
+                     Width="182" Foreground="White" BorderBrush="{x:Null}" FontSize="35" Margin="354,75,0,0" 
+                     Background="{x:Null}" Grid.ColumnSpan="2"></TextBox >
+
+
+            <Border BorderBrush="Silver" BorderThickness="0" Height="108" HorizontalAlignment="Left" Margin="133,40,0,0" Name="border2" VerticalAlignment="Top" Width="115">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#46FFFFFF" Offset="0.017" />
+                        <GradientStop Color="#79026EB3" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <TextBox Height="157" HorizontalAlignment="Right" 
+                     Name="Minutes" Text="00" 
+                     VerticalAlignment="Top" FontFamily="/Fonts/DIGITALDREAM.ttf#DIGITAL DREAM" 
+                     Width="143" Foreground="White" BorderBrush="{x:Null}" FontSize="70" Margin="0,40,157,0" 
+                     Background="{x:Null}"></TextBox >
+
+        </Grid>
+
+        <Button Content="Reset" Height="72" Foreground="White"
+         HorizontalAlignment="Left" Margin="93,573,0,0" 
+         Name="Reset1" VerticalAlignment="Top" Width="157" 
+         Click="Reset1_Click" Grid.Row="1" FontFamily="DengXian" FontWeight="Bold" BorderBrush="#FF016FB4" FontSize="30" Background="#7147485C" />
+        <Button Content="Lap" Height="72" Foreground="White"
+         HorizontalAlignment="Left" Margin="243,573,0,0" 
+         Name="Lap" Click="Lap_Click" VerticalAlignment="Top" 
+         Width="155" Grid.Row="1" FontWeight="Bold" FontFamily="DengXian" Background="#7147485C" BorderBrush="#FF016FB4" FontSize="30" />
+
+
+        <ListBox Height="289" 
+                 HorizontalAlignment="Center" 
+                 Margin="40,262,42,0" 
+                 Name="LapListBox" VerticalAlignment="Top" Width="398" Grid.Row="1" FontFamily="DengXian" FontSize="40" FontWeight="SemiBold" Foreground="#FFCAE3F2"  />
+        
+    </Grid>
+
+    
+</phone:PhoneApplicationPage>

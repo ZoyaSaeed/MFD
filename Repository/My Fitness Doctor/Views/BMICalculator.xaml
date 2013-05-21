@@ -1,0 +1,601 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="My_Fitness_Doctor.Views.BMICalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="728" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:PhoneApplicationPage.Resources>
+
+        <Style TargetType="ContentControl" x:Key="BMIHintStyle">
+            <Setter Property="Foreground" Value="Wheat"/>
+        </Style>
+
+        <Storyboard x:Name="Under0">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-93"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under1">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-90"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under2">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-87"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under3">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-85"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under4">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-78"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under5">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-74"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under6">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-70"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under7">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-67"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under8">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-61"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under9">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-58"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under10">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-56"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under11">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-52"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under12">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-49"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under13">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-46"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under14">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-40"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under15">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-37"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under16">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-33"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under17">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-31"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under18">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-27"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Under19">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-23"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Normal20">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-18"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Normal21">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-13"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Normal22">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-10"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Normal23">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-8"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Normal24">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="-5"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+        <!-- no need of movement here :| but now i've created ths storyboard so im not gonna delete it-->
+        <Storyboard x:Name="Normal25">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="0"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Over26">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="4"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Over27">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="8"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Over28">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="12"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Over29">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="15"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Over30">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="17.5"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Obese31">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="19.5"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Obese32">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="23"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Obese33">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="26"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Obese34">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="29"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Obese35">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="35"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="cObese36">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="38"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="cObese37">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="40"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="cObese38">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="44"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="cObese39">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="48"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="cObese40">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="53"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese41">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="57"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese42">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="61"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese43">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="63"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese44">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="66"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese45">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="71"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese46">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="74"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese47">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="77"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese48">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="81"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese49">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="85"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="mObese50">
+            <DoubleAnimation 
+                Duration="0:0:1" From="0" To="89"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+        <Storyboard x:Name="Reset">
+            <DoubleAnimation 
+                Duration="0:0:1" From="-72" To="0"
+                Storyboard.TargetName="ReadingNeedle"
+                Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)"
+                d:IsOptimized="True"/>
+        </Storyboard>
+
+
+
+
+
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Opacity="1" Height="800">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/CommonImages/Background.jpg" Stretch="UniformToFill" Opacity="1" />
+        </Grid.Background>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <Image Height="70" HorizontalAlignment="Left" 
+         Name="logo" Stretch="Fill" VerticalAlignment="Top"
+         Width="397" Source="/Images/CommonImages/Logo.png"  />
+
+
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Margin="1,30,0,0" Height="107">
+            <TextBlock x:Name="PageTitle" Text="BMI Calculator" Foreground="White" Margin="2,30,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="DengXian" FontWeight="Bold" Width="472" FontSize="70" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Height="596" VerticalAlignment="Top" 
+              Grid.Row="1" Margin="0,-5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="19*" />
+                <ColumnDefinition Width="427*" />
+                <ColumnDefinition Width="34*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Height="95" Margin="6,402,242,0" 
+               Name="Result" Text="0" TextAlignment="Left" VerticalAlignment="Top" FontSize="90" Foreground="#FF08D4FF" TextWrapping="Wrap" FontFamily="DengXian" Grid.ColumnSpan="2" />
+            <Image Height="167" HorizontalAlignment="Left" 
+             Margin="124,434,0,0" Name="BMImeter" Stretch="Fill"
+             VerticalAlignment="Top" Width="319" Source="/Images/BMI/bluebmi.png" Grid.Column="1" Grid.ColumnSpan="2" />
+
+            <Image Height="206" Margin="268,0,127,1" 
+                   Name="ReadingNeedle" Stretch="Fill" 
+                   VerticalAlignment="Bottom" Source="/Images/BMI/needle1.png" DataContext="{Binding ElementName=ResultBMI}" Grid.Column="1">
+                <Image.RenderTransform>
+                    <RotateTransform CenterX="10" CenterY="200" Angle="0"></RotateTransform>
+                </Image.RenderTransform>
+            </Image>
+            <!--Meter numbers-->
+            <TextBlock Height="37" HorizontalAlignment="Left" Margin="117,564,0,0" Name="textBlock1" Text="0" VerticalAlignment="Top" Foreground="#FF46B9D3" FontSize="28" Width="32" Grid.Column="1" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="140,481,0,0" Name="textBlock3" Text="10" VerticalAlignment="Top" Foreground="#FF46B9D3" FontSize="25" Grid.Column="1" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="214,430,0,0" Name="textBlock5" Text="20" VerticalAlignment="Top" FontSize="25" Foreground="#FF46B9D3" Grid.Column="1" />
+            <TextBlock Height="42" Margin="331,430,58,0" Name="textBlock6" Text="30" VerticalAlignment="Top" FontSize="25" Foreground="#FF46B9D3" Grid.Column="1" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="403,480,0,0" Name="textBlock7" Text="40" VerticalAlignment="Top" Foreground="#FF46B9D3" FontSize="25" Grid.Column="1" Grid.ColumnSpan="2" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="4,564,0,0" Name="textBlock8" Text="50" VerticalAlignment="Top" FontSize="25" Foreground="#FF46B9D3" Grid.Column="2" />
+
+            <!--Now text boxes and textblocks-->
+            <TextBlock Height="57" HorizontalAlignment="Left" Foreground="White" Margin="3,362,0,0" Name="textBlock2" Text="Your BMI:" VerticalAlignment="Top" Width="149" TextAlignment="Left" FontSize="28" 
+                       FontFamily="Microsoft MHei"  Grid.ColumnSpan="2" />
+           
+            
+            <Button Content="+" Height="100" HorizontalAlignment="Left" Margin="219,168,0,0" 
+          Name="Weight_inc" Foreground="White" VerticalAlignment="Top" Width="100" FontSize="38" Click="Weight_inc_Click" BorderBrush="#FF08CCF5" Grid.Column="1" BorderThickness="1" Background="#3208C5F7" />
+            <Button Content="-" Foreground="White" FontSize="38" Height="100" HorizontalAlignment="Left" Margin="293,168,0,0" Name="Weight_dec" 
+          VerticalAlignment="Top" Width="98" Click="Weight_dec_Click" BorderBrush="#FF08CCF5" Grid.Column="1" BorderThickness="1" Background="#3208C5F7" />
+            
+            <Button Content="+" FontSize="38" Height="100" HorizontalAlignment="Left" 
+          Margin="217,79,0,0" Foreground="White" Name="Height_inc" VerticalAlignment="Top" Width="100" Click="Height_inc_Click" Grid.Column="1" BorderBrush="#FF08D4FF" Background="#3208C5F7" BorderThickness="1" />
+
+            <Button Content="-" FontSize="38" Foreground="White" Height="100" HorizontalAlignment="Left" 
+          Margin="291,79,0,0" Name="Height_dec" VerticalAlignment="Top" 
+          Width="100" Click="Height_dec_Click" Grid.Column="1" BorderBrush="#FF08D4FF" Background="#3208C5F7" BorderThickness="1" />
+            <toolkit:PhoneTextBox HintStyle="{StaticResource BMIHintStyle}" 
+                                  Height="100" HorizontalAlignment="Left" 
+         Margin="51,168,0,328" Name="InputWeight" DataContext="Double" 
+                                  Text="" Hint="Weight" 
+                                  FontFamily="Microsoft MHei"
+                                  InputScope="Number" 
+                                  VerticalAlignment="Center" Width="194" 
+                                  ActualHintVisibility="Visible" 
+                                  HidesActionItemWhenEmpty="True"
+                                  Background="{x:Null}" 
+                                  BorderBrush="#FF08CCF5" 
+                                  FontWeight="Bold" Foreground="#FF3FA8F1" TextWrapping="NoWrap" SelectionBackground="#FF3A505B" TextChanged="InputWeight_TextChanged" BorderThickness="1" Grid.Column="1">
+            </toolkit:PhoneTextBox>
+
+            <Button Content="Calculate" Foreground="White" Height="99" HorizontalAlignment="Right" Margin="0,256,34,0" Name="Calculate" VerticalAlignment="Top" Width="342" Click="Calculate_Click" BorderThickness="2.3" FontFamily="DengXian" FontWeight="ExtraBold" FontSize="52" Background="{x:Null}" BorderBrush="#FF08CCF5" Grid.Column="1"></Button>
+
+            <TextBlock Height="78" Margin="112,356,50,0"
+             Name="Description" Text="" VerticalAlignment="Top" FontSize="36" FontFamily="Microsoft MHei" 
+            Foreground="#FF08FFE2" FontStyle="Normal" Grid.Column="1" DataContext="{Binding}" TextAlignment="Center"></TextBlock>
+            <!--<Button Content="in - lbs" Height="84" Name="imperial" Margin="6,-13,0,525" Click="imperial_Click" BorderBrush="{x:Null}" Background="#FF08D4FF" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="140" Foreground="Black" />
+            <Button Content="ft - kg" Height="84" Margin="0,-13,185,525" Name="metrics" Grid.Column="1" HorizontalAlignment="Right" Width="140" Click="metrics_Click" Background="#FF08D4FF" BorderBrush="{x:Null}" ClickMode="Hover" Foreground="Black" />-->
+
+            <toolkit:ToggleSwitch x:Name="Units" BorderBrush="Black" Background="#FF08D4FF"
+               Foreground="#FF3AAD98"
+                Margin="153,38,122,455" IsTabStop="False" VerticalAlignment="Center"
+                HorizontalContentAlignment="Center" FlowDirection="LeftToRight"
+                UseLayoutRounding="True" FontWeight="Bold" VerticalContentAlignment="Center" SwitchForeground="Black" BorderThickness="0" Height="103" Grid.Column="1" Content=""
+                Tap="Units_Tap_1" />
+
+            <!-- feet n kg -->
+            <TextBlock x:Name="fk" HorizontalAlignment="Left" Margin="35,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="56" Foreground="#FFEDF7F7" Grid.Column="1">
+            	<Run FontSize="32.75" Text="feet - kg"/>
+            </TextBlock>
+            <!-- cm n lbs -->
+            <TextBlock x:Name="cl" HorizontalAlignment="Left" Margin="281,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="51" Foreground="#FFEDF7F7" Opacity="100" FontSize="20" Grid.Column="1">
+            	<Run FontSize="33.5" Text="cm - lb"/>
+            </TextBlock>
+
+            <toolkit:PhoneTextBox HintStyle="{StaticResource BMIHintStyle}"
+                                  HorizontalAlignment="Left" 
+                                  Margin="51,79,0,417" Name="InputHeight" 
+                                  DataContext="{Binding}"
+                                  Text="" Hint="Height" InputScope="Number" 
+                                  VerticalAlignment="Center" Width="192"
+                                  Height="100" Background="{x:Null}" 
+                                  FontFamily="Microsoft MHei" 
+                                  FontWeight="ExtraBold" Foreground="#FF3FA8F1" TextWrapping="NoWrap" ActualHintVisibility="Visible" TextChanged="InputHeight_TextChanged" BorderBrush="#FF08CCF5" BorderThickness="1" Grid.Column="1"></toolkit:PhoneTextBox>
+        </Grid>
+    </Grid>
+
+    <!-- .....~.~.Needle movement is handled here.~.~...... -->
+
+<!--<shell:ApplicationBarIconButton 
+                IconUri="/Icons/Dark/appbar.edit.rest.png" Text="Rate/Review" x:Name="Rate" Click="Rate_Click_1"/>-->
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" 
+                               BackgroundColor="#FF070419" ForegroundColor="White">
+
+            <shell:ApplicationBarIconButton x:Name="Pin"  
+                                            IconUri="/Icons/Dark/Pin.png" Text="Pin" Click="Pin_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                IconUri="/Icons/Dark/appbar.questionmark.rest.png" Text="About" x:Name="about" Click="about_Click_1"/>
+
+            <shell:ApplicationBarIconButton 
+                IconUri="/Icons/Dark/Share.png" Text="Share" x:Name="Share" Click="Share_Click_1"/>
+            
+            <!--<shell:ApplicationBarIconButton 
+                IconUri="/Icons/Dark/appbar.refresh.rest.png" Text="reset" x:Name="Refresh" Click="Refresh_Click"/>-->
+           
+            
+           
+            <shell:ApplicationBarIconButton 
+                IconUri="/Icons/Dark/appbar.feature.settings.rest.png" Text="Settings" x:Name="settings" />
+
+            <shell:ApplicationBar.MenuItems>
+                
+                <shell:ApplicationBarMenuItem x:Name="Refresh" Text="Refresh" Click="Refresh_Click_1"/>
+                
+            </shell:ApplicationBar.MenuItems>
+            
+        </shell:ApplicationBar>
+        
+      </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

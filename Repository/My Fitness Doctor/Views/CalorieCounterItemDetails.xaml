@@ -1,0 +1,317 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="My_Fitness_Doctor.Views.CalorieCounterItemDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="728" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="False">
+    <Grid x:Name="LayoutRoot" Height="800">
+
+        <Grid.Background>
+            <ImageBrush Opacity="1" ImageSource="/Images/CommonImages/Background.jpg" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="100*" />
+            <RowDefinition Height="589*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Height="92" Name="Pagename" 
+                 Text="Nutritional Facts" FontSize="61" 
+                   FontFamily="DengXian" FontWeight="SemiBold" Foreground="White" Margin="12,122,0,0" HorizontalAlignment="Left" Width="456" VerticalAlignment="Top" />
+
+
+        <StackPanel Orientation="Horizontal"  
+                    Margin="4,186,0,0" Height="127" HorizontalAlignment="Left" Width="480" VerticalAlignment="Top">
+
+            <TextBlock Height="105" 
+              HorizontalAlignment="Left" 
+             Text="{Binding Calories}"  Name="Calories"
+             VerticalAlignment="Bottom"  Grid.Row="1"  
+              FontSize="100" FontFamily="DengXian" 
+                       Foreground="#FFAAE8E8" />
+
+            <TextBlock Height="56" 
+                          HorizontalAlignment="Left" 
+                     x:Name="CaloriesText"
+             Text="Calories" 
+             VerticalAlignment="Bottom"  
+             Width="166" FontSize="42" 
+             FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" Foreground="White" />
+
+
+        </StackPanel>
+        <Grid x:Name="SubItemsDetailsContentPanel" 
+              Margin="6,0,-17,0" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1105" />
+                <RowDefinition Height="13" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="230*" />
+                <ColumnDefinition Width="261*" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Height="0.5" Name="rectangle1" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,488,97,616" Grid.ColumnSpan="2" />
+
+
+            <Rectangle Height="0.5" Name="rectangle2" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,596,97,508" Grid.ColumnSpan="2" />
+
+            <Rectangle Height="0.5" Name="rectangle3" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,631,97,473" Grid.ColumnSpan="2" />
+
+            <Rectangle Height="0.5" Name="rectangle4" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,668,97,436" Grid.ColumnSpan="2" />
+
+            <Rectangle Height="0.5" Name="rectangle5" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,524,97,580" Grid.ColumnSpan="2" />
+
+            <Rectangle Height="0.5" Name="rectangle6" 
+                 Stroke="#FFAAE8E8" StrokeThickness="0"
+                  Width="360" Fill="#FF454848" Margin="34,558,97,546" Grid.ColumnSpan="2" />
+
+            <TextBlock x:Name="totalfatText" Foreground="White"
+             Text="Total Fats" Margin="73,452,257,371" FontSize="30" FontFamily="DengXian" FontWeight="SemiBold" Grid.ColumnSpan="2" />
+
+            <TextBlock Height="60" x:Name="cholestrolText"
+             Text="Cholesterol" Foreground="White"
+             VerticalAlignment="Top" Margin="73,487,232,0" FontSize="30" FontFamily="DengXian" FontWeight="SemiBold" Grid.ColumnSpan="2" />
+
+
+            <TextBlock Height="60" Foreground="White"
+                          HorizontalAlignment="Left" x:Name="SodiumText"
+             Text="Sodium" 
+             VerticalAlignment="Top" Margin="73,521,0,0" Width="150" 
+                       FontSize="30" FontWeight="SemiBold" FontFamily="DengXian" />
+
+            <TextBlock Height="60" Foreground="White"
+                          HorizontalAlignment="Left" x:Name="TotalCarbsText"
+             Text="Carbohydrates" 
+             VerticalAlignment="Top" Margin="73,562,0,0" Width="235"
+                       FontSize="30" FontFamily="DengXian" FontWeight="SemiBold" Grid.ColumnSpan="2" />
+
+
+            <TextBlock Height="60" Foreground="White"
+                          HorizontalAlignment="Left" x:Name="ProteinText"
+             Text="Protein" 
+             VerticalAlignment="Top" Margin="73,596,0,0" Width="150"
+                       FontSize="30" FontWeight="SemiBold" FontFamily="DengXian" />
+
+            <TextBlock Height="68" Foreground="White"
+                          HorizontalAlignment="Left" x:Name="CalciumText"
+             Text="Calcium" 
+             VerticalAlignment="Top" Margin="73,632,0,0" Width="150" 
+                       FontSize="30" FontFamily="DengXian" FontWeight="SemiBold" />
+
+            <TextBlock Height="60" x:Name="PotassiumText" Foreground="White"
+             Text="Potassium" 
+             VerticalAlignment="Top" Margin="73,669,257,0" FontSize="30" FontWeight="SemiBold" FontFamily="DengXian" Grid.ColumnSpan="2" />
+
+            <StackPanel Margin="38,0,0,618" x:Name="Totalfat"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock HorizontalAlignment="Left" 
+                  Text="{Binding TotalFat}" 
+                 x:Name="totalfat"  Margin="20,0,0,0"
+                       FontSize="30" Foreground="#FF8BE2E2" Height="35" 
+                       FontWeight="SemiBold" FontFamily="DengXian" />
+
+                <TextBlock Height="43" x:Name="units"
+                  Text="g" Width="23" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,582" x:Name="Cholestrol"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock Height="35" Text="{Binding Cholestrol}"
+                  x:Name="cholestrol" Margin="20,0,0,0" 
+                       FontSize="30" FontFamily="DengXian" 
+                       Foreground="#FF8BE2E2" FontWeight="SemiBold" />
+
+                <TextBlock Height="43" x:Name="units1"
+                  Text="mg" Width="46" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,548" x:Name="Sodium"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock Height="35" 
+                 HorizontalAlignment="Left" 
+                 x:Name="sodium" Text="{Binding Sodium}"
+                 VerticalAlignment="Top" Margin="20,0,0,0" 
+                 FontSize="30" FontFamily="DengXian" 
+                 FontWeight="SemiBold" Foreground="#FF8BE2E2" />
+
+
+                <TextBlock Height="43" x:Name="units2"
+                  Text="mg" Width="46" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,514" x:Name="Carbohydrates"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+
+                <TextBlock Height="35" 
+                  HorizontalAlignment="Right" 
+                   x:Name="totalcarbohydrates" 
+                   Text="{Binding TotalCarbs}" 
+                   VerticalAlignment="Top" 
+                    Margin="20,0,0,0"   
+                           FontSize="30" FontFamily="DengXian"
+                           FontWeight="SemiBold" Foreground="#FF8BE2E2" />
+
+                <TextBlock Height="43" x:Name="units3"
+                  Text="g" Width="23" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,474" x:Name="Protein"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock Height="35" 
+                 HorizontalAlignment="Left" 
+                  x:Name="protein" Text="{Binding Protein}"
+                  VerticalAlignment="Top"  Margin="20,0,0,0"  
+                  FontSize="30" FontFamily="DengXian" 
+                  FontWeight="SemiBold" Foreground="#FF8BE2E2" />
+
+
+                <TextBlock Height="43" x:Name="units4"
+                  Text="g" Width="23" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,440" x:Name="Calciumm"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock Height="35" 
+                 HorizontalAlignment="Left" 
+                 x:Name="calcium" Text="{Binding Calcium}" 
+                 VerticalAlignment="Top" Margin="20,0,0,0" 
+                 FontSize="30" Foreground="#FF8BE2E2" 
+                 FontWeight="SemiBold" FontFamily="DengXian" />
+
+                <TextBlock Height="43" x:Name="units5"
+                  Text="mg" Width="46" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="38,0,0,401" x:Name="Potassium"
+                        Height="32" 
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left" 
+                        Width="161" Grid.Column="1">
+
+                <TextBlock Height="35" 
+                          HorizontalAlignment="Left" 
+                        x:Name="potassium"
+             Text="{Binding Potassium}" 
+             VerticalAlignment="Top" Margin="20,0,0,0"  
+                       FontSize="30" FontFamily="DengXian" FontWeight="SemiBold" Foreground="#FF8BE2E2" />
+
+                <TextBlock Height="43" x:Name="units6"
+                  Text="mg" Width="46" FontSize="25" 
+                  FlowDirection="RightToLeft" FontFamily="Verdana"
+                  FontWeight="Medium" 
+                  Foreground="#FF8BE2E2"/>
+
+            </StackPanel>
+
+
+
+            <!--<TextBlock  HorizontalAlignment="Left" Grid.Column="0" 
+                       Name="SubItemName" Text="{Binding SubItemName}" 
+                            FontSize="22"  
+                            TextWrapping="Wrap" Margin="3,54,0,-54" />-->
+
+            <!--<TextBlock Height="30" HorizontalAlignment="Left" 
+                       Name="per" TextWrapping="Wrap" Text="/ " Grid.Column="0" FontSize="32" VerticalAlignment="Top" Margin="7,47,0,0" />-->
+
+
+            <TextBlock Height="59" HorizontalAlignment="Center" Margin="8,333,84,0" Name="textBlock1" Text="Serving" VerticalAlignment="Top" Width="138" TextWrapping="Wrap" FontSize="33" Foreground="White" />
+
+            <TextBlock Height="58" HorizontalAlignment="Center" Margin="34,370,94,0" Name="textBlock2" Text="Size" VerticalAlignment="Top" Width="102" TextWrapping="Wrap" FontSize="33" Foreground="White" />
+            <TextBlock  HorizontalAlignment="Left" 
+                           Name="ServingSizzee" FontSize="27" Text="{Binding ServingSize}" TextWrapping="Wrap" VerticalAlignment="Top" Margin="143,343,0,0" Width="293" Grid.ColumnSpan="2" FontFamily="DengXian" FontWeight="Bold" Foreground="#FF8BE2E2" Height="Auto" />
+            <Image Height="70" HorizontalAlignment="Left" 
+         Name="logo" Stretch="Fill" VerticalAlignment="Top"
+         Width="397" Source="/Images/CommonImages/Logo.png" Grid.ColumnSpan="2" />
+
+
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True"  ForegroundColor="White" BackgroundColor="#FF000005" IsMenuEnabled="True">
+
+            <shell:ApplicationBarIconButton x:Name="CalorieCounter" Click="CalorieCounter_Click" 
+                                            IconUri="/Images/CalorieCounter/Calculator.png" Text="Counter"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+
+</phone:PhoneApplicationPage>

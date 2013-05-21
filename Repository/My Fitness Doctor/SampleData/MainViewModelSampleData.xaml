@@ -1,0 +1,16 @@
+﻿<local:MainViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:My_Fitness_Doctor" 
+    SampleProperty="Sample Text Property Value">
+    
+    <local:MainViewModel.Items>
+        <local:ItemViewModel mainitems="design one" itemdescription="Maecenas praesent accumsan bibendum"/>
+        <local:ItemViewModel mainitems="design two" itemdescription="Dictumst eleifend facilisi faucibus" />
+        <local:ItemViewModel mainitems="design three" itemdescription="Habitant inceptos interdum lobortis" />
+        <local:ItemViewModel mainitems="design four" itemdescription="Nascetur pharetra placerat pulvinar" />
+        <local:ItemViewModel mainitems="design five" itemdescription="Sagittis senectus sociosqu suscipit" />
+        <local:ItemViewModel mainitems="design six" itemdescription="Torquent ultrices vehicula volutpat" />
+    </local:MainViewModel.Items>
+    
+</local:MainViewModel>
